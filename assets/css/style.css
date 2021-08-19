@@ -112,7 +112,7 @@ html {
 }
 /* slider */
 #slider {
-    background: url('/assets/img/slider3.jpg') top center;
+    background: url('../img/slider3.jpg') top center;
     background-repeat: no-repeat;
     background-size: cover;
     /* margin-top: 46px; */
@@ -182,8 +182,8 @@ html {
 }
 
 .member-item {
-   width: 33.333333%;
-   padding: 0 15px;
+    width: 33.333333%;
+    padding: 0 15px;
 }
 
 .member-item-img {
