@@ -5,6 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="./assets/css/style.css" />
+        <link rel="icon" href="./assets/img/logo.jpg">
         <link rel="stylesheet" href="./assets/css/themify-icons/themify-icons.css" />
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
         <title>The Band</title>
@@ -14,19 +15,19 @@
             <div id="header">
                 <ul id="navbar">
                     <li class="navbar-item">
-                        <a href="" class="">Home</a>
+                        <a href="#" class="">Home</a>
                     </li>
 
                     <li class="navbar-item">
-                        <a href="" class="">Band</a>
+                        <a href="#band" class="">Band</a>
                     </li>
 
                     <li class="navbar-item">
-                        <a href="" class="">Tour</a>
+                        <a href="#tour" class="">Tour</a>
                     </li>
 
                     <li class="navbar-item">
-                        <a href="" class="">Contact</a>
+                        <a href="#contact" class="">Contact</a>
                     </li>
 
                     <li class="navbar-item navbar-item-drop-down">
@@ -35,9 +36,9 @@
                             <i class="nav-arrow-down ti-angle-down"></i>
                         </a>
                         <ul class="subnav">
-                            <li><a href="">Merchandise</a></li>
-                            <li><a href="">Extras</a></li>
-                            <li><a href="">Media</a></li>
+                            <li><a href="#">Merchandise</a></li>
+                            <li><a href="#">Extras</a></li>
+                            <li><a href="#">Media</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -54,8 +55,9 @@
                 </div>
             </div>
 
+            <!-- the band section -->
             <div id="content">
-                <div class="content-section">
+                <div id="band" class="content-section">
                     <h3 class="section-heading">THE BAND</h3>
                     <p class="section-sub-heading">We love music!</p>
                     <p class="about-content">
@@ -67,8 +69,8 @@
                         nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                     </p>
 
-                    <div class="member-list">
-                        <div class="member-item">
+                    <div class="row member-list">
+                        <div class="col col-3">
                             <p class="member-item-name">Name</p>
                         </br>
                             <img src="./assets//img/image4.jpg" alt="member" class="member-item-img">
@@ -81,14 +83,14 @@
                             </div>
                         </div>
 
-                        <div class="member-item">
+                        <div class="col col-3">
                             <p class="member-item-name">Name</p>
                         </br>
                             <img src="./assets//img/image4.jpg" alt="member" class="member-item-img">
                             <div class="member-item-about"></div>
                         </div>
 
-                        <div class="member-item">
+                        <div class="col col-3">
                             <p class="member-item-name">Name</p>
                         </br>
                             <img src="./assets//img/image4.jpg" alt="member" class="member-item-img">
@@ -99,7 +101,7 @@
 
                 <!-- tour -->
                 <div class="tour-section">
-                    <div class="content-section">
+                    <div id="tour" class="content-section">
                         <h3 class="section-heading">TOUR DATES</h3>
                         <p class="section-sub-heading">Lorem ipsum we'll play you some music.
                         </br> Remember to book your tickets!</p>
@@ -122,8 +124,8 @@
                             </li>
                         </ul>
 
-                        <div class="city-list">
-                            <div class="city-item">
+                        <div class="row city-list">
+                            <div class="col col-3 city-item">
                                 <div class="wrap">
                                     <img src="./assets//img/image5.jpg" alt="Paris" class="city-img">
                                     <p class="city-name">
@@ -140,7 +142,7 @@
                                 </div>
                             </div>
 
-                            <div class="city-item">
+                            <div class="col col-3 city-item">
                                 <div class="wrap">
                                     <img src="./assets//img/image6.jpg" alt="New York" class="city-img">
                                     <p class="city-name">
@@ -157,7 +159,7 @@
                                 </div>
                             </div>
 
-                            <div class="city-item">
+                            <div class="col col-3 city-item">
                                 <div class="wrap">
                                     <img src="./assets//img/image7.jpg" alt="New York" class="city-img">
                                     <p class="city-name">
@@ -177,12 +179,13 @@
                     </div>
                 </div>
 
-                <div class="content-section">
+                <!-- contact section -->
+                <div id="contact" class="content-section" style="margin-bottom: 50px;">
                     <h3 class="section-heading">Contact</h3>
                     <p class="section-sub-heading">We love our fans!</p>
 
-                    <div class="contact">
-                        <div class="contact-info">
+                    <div class="row contact-content" >
+                        <div class="col col-3 ">
                             <p class="contact-info-item">Fan? Drop a note.</p>
                             <p class="contact-info-item">
                                 <i class="ti-location-pin contact-icons"></i>
@@ -198,16 +201,42 @@
                             </p>
                         </div>
 
-                        <div class="contact-form">
-                            <input type="text" class="contact-form-input">
-                            <input type="text" class="contact-form-input">
-                            <textarea name="" id="" cols="30" rows="10" class="contact-form-textarea"></textarea>
+                        <div class="col col-2-3 contact-form">
+                            <form action="">
+                                <div class="row">
+                                    <div class="col col-2"> 
+                                        <input type="text" placeholder="Name" class="form-control" required>
+                                    </div>
+                                    <div class="col col-2">
+                                        <input type="email" placeholder="Email" class="form-control" required>
+                                    </div>
+                                </div>
+                                <div class="row mt-8">
+                                    <div class="col col-1">
+                                       <textarea name="Message" placeholder="Message" id="" class="form-control" cols="30" rows="5"></textarea>
+                                    </div>
+                                </div>    
+                                <input type="submit" value="Send" class="form-submit-btn mt-16">                
+                            </form>
                         </div>
                     </div>
                 </div>
+
+                    <!-- map section -->
+                <div class="map-section">
+                    <img src="./assets/img/image8.jpg" alt="map">
+                </div>
             </div>
 
-            <div id="footer"></div>
+            <div id="footer">
+               <p class="footer-content">
+                   <a href="#"><i class="ti-angle-up footer-icon"></i></a>
+                   Copy writer by Thang Huynh +84905548920 
+                   <a href="https://www.facebook.com/thanghuynh99/">
+                    www.facebook.com
+                   </a>
+               </p>
+            </div>
         </div>
     </body>
 </html>
