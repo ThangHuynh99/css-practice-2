@@ -259,7 +259,6 @@ html {
 
 /* member */
 .member-list {
-    height: 325px;
     margin-bottom: 10px;
 }
 
@@ -292,6 +291,7 @@ html {
     line-height: 3rem;
     text-align: center;
     color: #777;
+    margin-bottom: 10px;
 }
 
 /* tour */
@@ -404,6 +404,7 @@ html {
     display: flex;
     align-items: center;
     border: none;
+   
 }
 
 .city-ticket a {
