@@ -8,6 +8,7 @@
         <link rel="icon" href="./assets/img/logo.jpg">
         <link rel="stylesheet" href="./assets/css/themify-icons/themify-icons.css" />
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="./assets//css/responsive.css">
         <title>The Band</title>
     </head>
     <body>
@@ -31,7 +32,7 @@
                     </li>
 
                     <li class="navbar-item navbar-item-drop-down">
-                        <a href="">
+                        <a href="#">
                             More
                             <i class="nav-arrow-down ti-angle-down"></i>
                         </a>
@@ -42,10 +43,15 @@
                         </ul>
                     </li>
                 </ul>
-
+                <!-- mobile menu -->
+                <div id="mobile-menu" class="mobile-menu-btn">
+                    <i class="menu-icon ti-menu"> </i>
+                </div>
+                <!-- pc menu -->
                 <div class="search-btn">
                     <i class="search-icon ti-search"> </i>
                 </div>
+                
             </div>
 
             <div id="slider">
@@ -238,5 +244,37 @@
                </p>
             </div>
         </div>
+        <script>
+            var header = document.getElementById('header');
+            var mobileMenu = document.getElementById('mobile-menu');
+            var headerHeight = header.clientHeight;
+
+            //đóng mở mobile menu
+            mobileMenu.onclick = function() {
+               // document.getElementsByTagName('#navbar > li:first-child');
+                var isClosed = header.clientHeight === headerHeight;
+                if(isClosed) {
+                    header.style.height = 'auto';
+                } else {
+                    header.style.height = null;
+                }
+            }
+
+            //tự động đóng khi chọn menu
+            var menuItems = document.querySelectorAll('#navbar li a[href*="#"]')
+            for (var i = 0; i < menuItems.length; i++) {
+                var menuItem = menuItems[i];
+               
+                menuItem.onclick = function(e) {
+                    var isParentMenu = this.nextElementSibling && menuItem.nextElementSibling.classList.contains('subnav');
+                    if(isParentMenu) {
+                        e.preventDefault();
+                    } else {
+                        header.style.height = null;
+                    }
+                }
+            }
+
+        </script>
     </body>
 </html>

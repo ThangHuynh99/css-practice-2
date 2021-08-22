@@ -14,18 +14,19 @@ html {
 }
 
 /* responsive */
-    /* BREAK POINT */
-    /* 
+/* BREAK POINT */
+/* 
         PC: >= 1024px
     */
 
-    /* 
+/* 
         Tablet: >= 740px & < 1024px   
     */
 
-    /* 
+/* 
         Mobile: < 740px
     */
+
 /* common class */
 .row {
     margin: 0 -15px;
@@ -66,6 +67,10 @@ html {
     margin-top: 16px !important;
 }
 /* header */
+/* 
+.main {
+    overflow: hidden;
+} */
 
 #header {
     height: 46px;
@@ -75,6 +80,7 @@ html {
     right: 0;
     left: 0;
     z-index: 1;
+    /* overflow: hidden; */
 }
 
 #navbar {
@@ -94,6 +100,7 @@ html {
     padding: 0 24px;
     display: inline-block;
     text-transform: uppercase;
+    width: 100%;
 }
 
 .navbar-item:hover > a {
@@ -150,20 +157,37 @@ html {
 }
 
 /* search header */
+#header .mobile-menu-btn,
 #header .search-btn {
     float: right;
     padding: 0 21px;
 }
 
+#header .menu-icon,
 #header .search-icon {
     color: white;
     font-size: 1.6rem;
     line-height: 46px;
 }
 
+#mobile-menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+}
+
 #header .search-btn:hover {
     background-color: #f44336;
     cursor: pointer;
+}
+
+#header .mobile-menu-btn:hover {
+    background-color: #ccc;
+}
+
+#header .mobile-menu-btn:hover .menu-icon {
+    color: #000;
 }
 /* slider */
 #slider {
@@ -199,9 +223,12 @@ html {
 /* content */
 .content-section {
     width: 940px;
+    max-width: 100%;
     padding: 80px 0;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
 }
 
 .section-heading {
@@ -440,10 +467,9 @@ html {
     transition: 0.2s;
 }
 
-
 /* map section */
-.map-section{
-   margin-bottom: -3px;
+.map-section {
+    margin-bottom: -3px;
 }
 
 .map-section img {
@@ -464,7 +490,6 @@ html {
     padding-top: 40px;
     height: 100%;
 }
-
 
 .footer-content a {
     text-decoration: none;
